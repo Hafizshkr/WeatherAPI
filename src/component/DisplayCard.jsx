@@ -6,11 +6,10 @@ const DisplayCard = () => {
   const [displayWeathers, setDisplayWeathers] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
-
+  const key = "0e32b2d95a837674985c2e22b312e186"
+  
   const dataFetch = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${
-      import.meta.env.VITE_API_KEY
-    }&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${key}&units=metric`;
     if (!location) {
       return alert("please put valid location");
     }
